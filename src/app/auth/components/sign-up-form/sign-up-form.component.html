@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form" class="auth-form">
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="email" />
+    <span class="input-error" matError *ngIf="form.get('email')?.hasError('required')">
+      Email is required
+    </span>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" formControlName="name" />
+    <span class="input-error" matError *ngIf="form.get('name')?.hasError('required')">
+      Name is required
+    </span>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Lastname</mat-label>
+    <input matInput placeholder="Lastname" formControlName="lastname" />
+    <span class="input-error" matError *ngIf="form.get('lastname')?.hasError('required')">
+      Lastname is required
+    </span>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Phone Number</mat-label>
+    <input matInput placeholder="Phone Number" formControlName="phone" />
+    <span class="input-error" matError *ngIf="form.get('phone')?.hasError('required')">
+      Phone Number is required
+    </span>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Birthdate</mat-label>
+    <input type="date" matInput placeholder="Birthdate" formControlName="birthdate" />
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" type="password" formControlName="password" />
+    <span class="input-error" matError *ngIf="form.get('password')?.hasError('required')">
+      Password is required
+    </span>
+  </mat-form-field>
+  <button mat-raised-button class="form-button" [disabled]="form.invalid" color="primary" type="submit">Sign Up</button>
+</form>

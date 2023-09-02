@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%;
+
+  .container {
+    margin: 0;
+    height: 100%;
+    display: block;
+  }
+
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: purple;
+    flex: 1;
+
+    .card-title {
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+
+    .auth-form {
+      max-width: 500px;
+      height: 100%;
+
+      .form-field {
+        width: 100%;
+        margin-top: 0.8rem;
+      }
+    }
+  }
+}
